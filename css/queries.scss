@@ -1,0 +1,34 @@
+@media only screen and (max-width: 1200px) {
+  header, #wishlist, .tasks {
+    width: 95%;
+    } 
+}
+@media only screen and (max-width: 800px) {
+    #wishlist #text, #wishlist button {
+        float: none;
+        width: 100%;
+        display: block; 
+        margin: 10px 0;
+      
+        button{
+            padding: 15px;
+        }
+        #validation_box{
+            width: 50%;
+        }    
+    }
+}
+@media only screen and (max-width: 550px) {
+    .tasks #todo, .tasks #done {
+        width: 100%;
+        float: none;
+        margin: 0 auto;
+    }
+    .tasks #done {
+        margin-top: 10px;
+        }
+    
+    ul {
+        margin-left:7%;
+    }
+}

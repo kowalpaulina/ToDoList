@@ -1,0 +1,186 @@
+/* RESET:  
+http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* for html shiv */
+article, aside, figure, footer, header, hgroup,
+menu, nav, section {
+  display: block; }
+
+/* MY CODE*/
+.clearfix {
+  zoom: 1; }
+
+.clearfix:after {
+  content: '.';
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden; }
+
+body {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  height: 100%;
+  color: #fff;
+  background: #00bf8f;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #00bf8f, #001510);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(right, #00bf8f, #001510);
+  background: linear-gradient(to left, #00bf8f, #001510);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+
+header {
+  text-align: center;
+  width: 60%;
+  background-color: #2B4D44;
+  margin: 20px auto 10px auto;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 0; }
+  header h1 {
+    font-size: 200%;
+    font-weight: 300; }
+
+#wishlist {
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding-top: 10px; }
+  #wishlist .form {
+    width: 100%; }
+  #wishlist #validation_box {
+    color: #fff;
+    font-size: 80%;
+    width: 15%;
+    margin: 0 25% -25px;
+    min-height: 35px; }
+    #wishlist #validation_box p {
+      padding: 7px;
+      color: #FF3232; }
+    #wishlist #validation_box .active {
+      background-color: #2B4D44;
+      border-radius: 5px; }
+  #wishlist .inputstyle, #wishlist input, #wishlist button {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #2B4D44;
+    border-radius: 5px;
+    color: #fff;
+    padding: 25px;
+    font-size: 100%; }
+  #wishlist input {
+    outline: none;
+    -moz-outline: none;
+    width: 60%;
+    float: left; }
+  #wishlist button {
+    cursor: pointer;
+    margin-left: 2%;
+    background-color: #2B4D44;
+    border: 1px solid #2B4D44;
+    color: #fff;
+    outline: none;
+    -moz-outline: none;
+    width: 30%;
+    float: right; }
+
+::-webkit-input-placeholder {
+  color: #fff; }
+
+:-ms-input-placeholder {
+  color: #fff; }
+
+:-moz-placeholder {
+  color: #fff; }
+
+.tasks {
+  width: 60%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  min-height: 200px; }
+
+.boxes, #todo, #done {
+  width: 50%;
+  text-align: left;
+  padding-top: 5px;
+  list-style-position: outside;
+  height: 100%; }
+
+h3 {
+  font-size: 120%;
+  text-align: center;
+  font-weight: 400; }
+
+#todo {
+  box-sizing: border-box;
+  float: left; }
+
+#done {
+  float: right; }
+
+li {
+  text-align: left;
+  list-style: circle;
+  word-wrap: break-word;
+  max-width: 100%;
+  line-height: 1.3;
+  margin-top: 15px; }
+
+li label {
+  cursor: pointer; }
+
+ul {
+  margin-left: 30%; }
+
+/*# sourceMappingURL=style.css.map */
