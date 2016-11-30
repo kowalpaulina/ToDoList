@@ -1,26 +1,57 @@
-@media only screen and (max-width: 1200px) {
-  header, #wishlist, .tasks {
-    width: 95%; } }
-@media only screen and (max-width: 800px) {
-  #wishlist #text, #wishlist button {
-    float: none;
-    width: 100%;
-    display: block;
-    margin: 10px 0; }
-    #wishlist #text button, #wishlist button button {
-      padding: 15px; }
-    #wishlist #text #validation_box, #wishlist button #validation_box {
-      width: 50%; } }
+@media screen and (max-width: 1200px) {
+  header, #wishlist, #tasks {
+    width: 95%; }
+
+  #wishlist #validation_box {
+    width: 18%;
+    margin: -10px 0 10px 0%; } }
+@media screen and (max-width: 800px) {
+  #wishlist {
+    width: 95%; }
+    #wishlist .form {
+      margin: auto; }
+    #wishlist #validation_box {
+      width: 25%;
+      margin: -10px 0 0 3%; }
+    #wishlist button, #wishlist input {
+      display: block;
+      float: none;
+      width: 95%;
+      margin: 10px auto; }
+    #wishlist button {
+      padding: 15px; } }
 @media only screen and (max-width: 550px) {
-  .tasks #todo, .tasks #done {
-    width: 100%;
+  #tasks #todo, #tasks #done {
+    width: 95%;
     float: none;
     margin: 0 auto; }
 
-  .tasks #done {
+  #tasks #done {
     margin-top: 10px; }
 
   ul {
-    margin-left: 7%; } }
+    margin-left: 7%; }
+
+  #wishlist #validation_box {
+    width: 30%; } }
+@media only screen and (max-width: 450px) {
+  #wishlist #validation_box {
+    width: 35%; }
+
+  #tasks #todo, #tasks #done {
+    width: 95%;
+    float: none;
+    margin: 0 auto; } }
+@media only screen and (max-width: 350px) {
+  #wishlist #validation_box {
+    width: 45%; }
+
+  #tasks #todo, #tasks #done {
+    width: 95%;
+    float: none;
+    margin: 0 auto; } }
+@media only screen and (max-width: 300px) {
+  #wishlist #validation_box {
+    width: 50%; } }
 
 /*# sourceMappingURL=queries.css.map */
