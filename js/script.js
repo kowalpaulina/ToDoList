@@ -1,5 +1,4 @@
 var button = document.querySelector('.submit');
-var todo = document.querySelector('.todo');
 var validation_box = document.getElementById('validation_box');
 var todolist = document.getElementById("todo_task");
 var donelist = document.getElementById("done_task");
@@ -30,10 +29,9 @@ function cretateLi(string){
 function addTask(){
     var task = document.getElementById('text');
     var taskItem = cretateLi(task.value);
-    var p = todolist.appendChild(taskItem);
+    todolist.appendChild(taskItem);
     changeStatus(taskItem, eventHandler=completed);
     task.value = "";
-    //localstorage_setValue(p);
     
     var close = document.getElementsByClassName("close");
     var i;
