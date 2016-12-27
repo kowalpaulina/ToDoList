@@ -60,17 +60,17 @@
         float: none;
         margin: 0 auto;
     }
+    
+    #tasks #done h3{
+        margin-top: 25px;
+    }
+    
+    
 }
 
 @media only screen and (max-width: 350px) {
     #wishlist #validation_box{
         width: 45%;}
-    
-    #tasks #todo, #tasks #done {
-        width: 95%;
-        float: none;
-        margin: 0 auto;
-    }
 }
 
 @media only screen and (max-width: 300px) {
