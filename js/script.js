@@ -1,69 +1,85 @@
-var button = document.querySelector('.submit');
-var validation_box = document.getElementById('validation_box');
-var todolist = document.getElementById("todo_task");
-var donelist = document.getElementById("done_task");
-var task = document.getElementById('text');
+'use strict';
 
-button.addEventListener("click",function(event){
-    var task = document.getElementById('text');
+const button = document.querySelector('.submit');
+const validation_box = document.getElementById('validation_box');
+const todolist = document.getElementById("todo_task");
+const donelist = document.getElementById("done_task");
+const task = document.getElementById('text');
+
+button.addEventListener("click", checkValue);
+
+
+function checkValue(event){
+
         if(!(task.value=='')){
-            addTask(task);   
+            addTask();   
         }else{
             addValidComment();
         }
     event.preventDefault();
-});
+}
 
-function cretateLi(string){
-        var li = document.createElement("li");
-        var label = document.createElement("label");
-        label.innerHTML = string;
-        li.appendChild(label); 
-        var div = document.createElement("div");
-        div.innerHTML = "\u00D7";
-        div.classList = "close";
-        li.appendChild(div);
-        return li;
-    }
 
 function addTask(){
-    var task = document.getElementById('text');
-    var taskItem = cretateLi(task.value);
+    let taskItem = cretateElement(task.value);
+    const close = document.getElementsByClassName("close");
+
     todolist.appendChild(taskItem);
-    changeStatus(taskItem, eventHandler=completed);
+    changeStatus(taskItem, makeCompleted);
     task.value = "";
     
-    var close = document.getElementsByClassName("close");
-    var i;
-    for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var element = this.parentElement;
-    element.style.display = "none";
-  }
-}}
-var completed = function(){
+    for (let i = 0; i < close.length; i++) {
+        close[i].addEventListener("click", finishTask);
+    }
+
+    function finishTask() {
+        const element = this.parentElement;
+        event.stopPropagation();
+        element.style.display = "none";
+    }
+}
+
+
+function cretateElement(taskValue){
+        const elementOfList = document.createElement("li");
+        const label = document.createElement("label");
+        const div = document.createElement("div");
+        label.innerHTML = taskValue;
+        elementOfList.appendChild(label); 
+        div.innerHTML = "\u00D7";
+        div.classList = "close";
+        elementOfList.appendChild(div);
+        return elementOfList;
+}
+
+
+const makeCompleted = function(){
     var taskItem = this;
     donelist.appendChild(taskItem);
-    changeStatus(taskItem, eventHandler=incompleted);    
+    changeStatus(taskItem, makeIncompleted);    
 }
-var incompleted = function(){
-    var taskItem = this;
+
+const makeIncompleted = function(){
+    const taskItem = this;
     todolist.append(taskItem);
-    changeStatus(taskItem, eventHandler=completed);
+    changeStatus(taskItem, makeCompleted);
 }
+
 function changeStatus(item, eventHandler){
     item.onclick = eventHandler;
 }
+
 function addValidComment(){
-    var comment = document.createElement("p"); 
+    const comment = document.createElement("p"); 
     if(!(validation_box.hasChildNodes("p"))){
-        var valid_comment = "Wpisz zadanie!";
+        const valid_comment = "Wpisz zadanie!";
         validation_box.appendChild(comment);
         comment.innerHTML = valid_comment;
         comment.classList = "active";
         setTimeout(function(){validation_box.removeChild(comment)},2500);
         $(comment).fadeToggle(2500);
-    }}
+    }
+}
 
  /*function localstorage_setValue(p){
     var todotask = $(p).val();
